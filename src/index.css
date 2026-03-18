@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-textMain font-sans min-h-screen antialiased selection:bg-accent selection:text-white;
+  }
+}
+
+/* Custom CSS for score circle animation */
+.score-circle-anim {
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+/* Custom fade-in animation for results */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
